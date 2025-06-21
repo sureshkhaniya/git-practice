@@ -1,0 +1,32 @@
+using System;
+
+namespace CircleAreaApp
+{
+    // Circle class
+    class Circle
+    {
+        public double Radius { get; set; }
+
+        // Method to calculate area
+        public double CalculateArea()
+        {
+            return Math.PI * Radius * Radius;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Circle myCircle = new Circle();
+
+            Console.Write("Enter the radius of the circle: ");
+            myCircle.Radius = Convert.ToDouble(Console.ReadLine());
+
+            double area = myCircle.CalculateArea();
+            Console.WriteLine("The area of the circle is: " + area);
+
+            Console.ReadLine(); // Keeps console window open
+        }
+    }
+}
